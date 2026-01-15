@@ -4,6 +4,7 @@ from src.app import MarksSystem
 
 class TestSprint1(unittest.TestCase):
 
+    # Sprint 1 tests
     def test_add_student_success(self):
         ms = MarksSystem()
         ms.add_student("101", "Asha")
@@ -27,12 +28,9 @@ class TestSprint1(unittest.TestCase):
         with self.assertRaises(ValueError):
             ms.add_marks("101", 120)
 
+    # Sprint 2 test
     def test_calculate_grade_A_plus(self):
         ms = MarksSystem()
         ms.add_student("201", "Ravi")
         ms.add_marks("201", 95)
         self.assertEqual(ms.calculate_grade("201"), "A+")
-
-
-if __name__ == "__main__":
-    unittest.main()
