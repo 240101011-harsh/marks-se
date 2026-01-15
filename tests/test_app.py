@@ -27,6 +27,12 @@ class TestSprint1(unittest.TestCase):
         with self.assertRaises(ValueError):
             ms.add_marks("101", 120)
 
+    def test_calculate_grade_A_plus(self):
+        ms = MarksSystem()
+        ms.add_student("201", "Ravi")
+        ms.add_marks("201", 95)
+        self.assertEqual(ms.calculate_grade("201"), "A+")
+
 
 if __name__ == "__main__":
     unittest.main()
