@@ -1,6 +1,7 @@
 import unittest
 from src.app import MarksSystem
 
+
 class TestSprint1(unittest.TestCase):
 
     def test_add_student_success(self):
@@ -26,6 +27,6 @@ class TestSprint1(unittest.TestCase):
         with self.assertRaises(ValueError):
             ms.add_marks("101", 120)
 
+
 if __name__ == "__main__":
     unittest.main()
-
