@@ -29,3 +29,10 @@ class TestSprint1(unittest.TestCase):
 if __name__ == "__main__":
     unittest.main()
 
+
+def test_calculate_grade_A_plus(self):
+    ms = MarksSystem()
+    ms.add_student("201", "Ravi")
+    ms.add_marks("201", 95)
+    self.assertEqual(ms.calculate_grade("201"), "A+")
+
